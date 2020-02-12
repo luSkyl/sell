@@ -1,0 +1,6 @@
+打包:mvn clean package -Dmaven.test.skip=true
+查看 端口号: ss -lntpd | grep :8080
+
+netstat -lnp|grep 8080
+
+更换端口:java jar -Dserver.port=8090 sell.jar

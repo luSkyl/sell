@@ -1,0 +1,65 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.0.161:3306/sell?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html;
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    request-context-attribute: requestContextAttribute
+    suffix: .ftl
+    template-loader-path: classpath:/templates
+  redis:
+    host: 192.168.0.161
+    port: 6379
+
+  thymeleaf:
+      prefix: classpath:/templates/
+      suffix: .ftl
+      cache: false
+      encoding: utf-8
+      check-template-location: true
+    servlet:
+      content-type: text/html
+
+
+server:
+  port: 8080
+  servlet:
+    context-path: /sell
+
+wechat:
+  mpAppId: wxa7148a146a156548
+  mpAppSecret: 84fd42ed5170d6374291d9f84c262c84
+  mchId: 1409146202
+  mchKey: c976503d34ca432c601361f969fd8d85
+  keyPath:
+  openAppId:
+  openAppSecret:
+  notifyUrl: http://lcy.nat100.top/sell/pay/notify
+  templateId:
+    orderStatus:
+
+
+project-url:
+   wechatMpAuthorize: http://lcy.nat100.top
+   wechatOpenAuthorize: http://lcy.nat100.top
+   sell: http://lcy.nat100.top
+
+upyun:
+  bucketName: XXX
+  userName: xxx
+  password: xxxx
+  imageHost: http://xxx.com/
+
